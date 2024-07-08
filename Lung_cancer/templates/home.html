@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lung Cancer Risk Assessment</title>
+  <style>
+    .title h1{
+      text-align: center;
+      color: red;
+    }
+    .header{
+      color: black;
+      font-weight: bold;
+      font-size: 25px;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      height:100px;
+      width:500px;
+      background:linear-gradient(to right,skyblue 40%,white 100%);
+      padding-top: 10px;
+      border-radius: 20px;
+      text-align: center;
+    }   
+    .gender,.age,.smoke,.yellowfinger,.anxiety,.peerpressure,.chronic,.fatigue,.allergy,.wheezing,.alcohol,.coughing,.breath,.swallow,.chest{
+      height: 100px;
+      width:1200px;
+      margin-left: 50px;
+      border: 3px solid white;
+      border-radius: 30px;
+      font-size: 30px;
+      padding-bottom: 10px;
+      margin-left: 30px;
+    }
+    .button-container{
+      margin-left: 500px;
+      margin-top: -105px;
+    }
+    img{
+      height:80px;
+      width:100px;
+      padding: 0px;
+      border: 0px solid black;
+      border-radius: 10px;
+    }
+    .button-container input[type="radio"]{
+      padding-top: 100px;
+      height: 20px;
+      width: 20px;
+    }
+    .gap{
+      margin-left: 350px;
+      margin-top: -80px;
+    }
+    .button-container input[type="number"]{
+      margin-left: 200px;
+      margin-top: 40px;
+      text-align: center;
+      font-size: 30px;
+      width: 250px;
+    }
+    input[type="submit"] {
+      height: 50px;
+      width: 150px;
+      background-color: red;
+      color: #fff;
+      padding: 10px;
+      border: 5px solid black;
+      border-radius: 10px;
+      font-size: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top:20px;
+      margin-left: 550px;
+    }
+    
+    input[type="submit"]:hover {
+      background-color:firebrick;
+    }
+    
+    
+    
+    
+
+
+  </style>
+</head>
+<body>
+  <div class="title">
+  <h1>Lung Cancer Risk Diagnosis</h1>
+  </div>
+  
+  <form id="assessmentForm" action="/result" method="post">
+
+    <div class="gender">
+    <div class="header"><label for="gender">Gender:</label></div class="header">
+    <div class="button-container">
+    <img src="https://i.pinimg.com/564x/db/b4/f6/dbb4f6a59b023180b28ff2166c72ebf5--man-in-suit-suit-and-tie.jpg">
+    <input type="radio" id="genderMale" name="gender" value="male">
+    <label for="genderMale">Male</label>
+    <div class="gap">
+    <img src="https://us.123rf.com/450wm/tuktukdesign/tuktukdesign1703/tuktukdesign170300042/73535588-woman-user-icon-person-profile-avatar-glyph-vector-illustration.jpg?ver=6">
+    <input type="radio" id="genderFemale" name="gender" value="female">
+    <label for="genderFemale">Female</label>
+    </div class="gap">
+      </div class="button-container">
+    </div>
+      
+      
+    <div class="age">
+    <div class="header"><label for="age">Age:</label></div class="header">
+      <div class="button-container">
+    <input type="number" id="age" name="age" required>
+      </div class="button-container">
+      </div>
+
+      <div class="smoke">
+    <div class="header"><label for="smoking">Do you smoke?</label></div class="header">
+      <div class="button-container">
+        <img src="https://news.northwestern.edu/assets/Stories/2023/03/cigarette1940__FocusFillWzEyMDAsNjMwLCJ5Iiw4N10.jpg">
+    <input type="radio" id="smokingYes" name="smoking" value="yes">
+    <label for="smokingYes">Yes</label>
+    <div class="gap">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/No_smoking_sign.svg/2048px-No_smoking_sign.svg.png">
+    <input type="radio" id="smokingNo" name="smoking" value="no">
+    <label for="smokingNo">No</label>
+    </div>
+      </div class="button-container">
+      </div>
+
+      <div class="yellowfinger">
+    <div class="header"><label for="yellowfingers">Do you have <br>yellowfingers?</label></div class="header">
+      <div class="button-container">
+        <img src="https://d3079h9ojn760r.cloudfront.net/media/2018/04/25131741/yellow-nails-after-Polish.jpg">
+    <input type="radio" id="yellowfingersYes" name="yellowfingers" value="yes">
+    <label for="yellowfingersYes">Yes</label>
+    <div class="gap">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Fingernails2.jpg">
+    <input type="radio" id="yellowfingersNo" name="yellowfingers" value="no">
+    <label for="yellowfingersNo">No</label>
+    </div>
+      </div class="button-container">
+      </div>
+
+      <div class="anxiety">
+    <div class="header"><label for="anxiety">Do you have anxiety?</label></div class="header">
+      <div class="button-container">
+        <img src="https://media.istockphoto.com/id/1342231454/photo/shocked-asian-student-grabbing-head-sitting-at-desk-in-class.jpg?s=612x612&w=0&k=20&c=rjJHOvoZZLZCCV5uLXTc5Vb5yNOxjIEllDJfwFPK8rQ=">
+    <input type="radio" id="anxietyYes" name="anxiety" value="yes">
+    <label for="anxietyYes">Yes</label>
+    <div class="gap">
+      <img src="https://media.newyorker.com/photos/5abd44f4d5af551caa4ae744/master/w_2560%2Cc_limit/Katzenstein-Week-Without-Anxiety.jpg">
+    <input type="radio" id="anxietyNo" name="anxiety" value="no">
+    <label for="anxietyNo">No</label>
+    </div>
+      </div class="button-container">
+      </div>
+
+
+      <div class="peerpressure">
+    <div class="header"><label for="peerpressure">Do you have peerpressure?</label></div class="header">
+      <div class="button-container">
+        <img src="https://www.scripps.org/sparkle-assets/images/peerpressure_web-c44c752859283593e27682ad68de0066.jpeg">
+    <input type="radio" id="peerpressureYes" name="peerpressure" value="yes">
+    <label for="peerpressureYes">Yes</label>
+    <div class="gap">
+      <img src="https://img.freepik.com/free-photo/medium-shot-happy-friends-city_23-2149003088.jpg?w=2000">
+    <input type="radio" id="peerpressureNo" name="peerpressure" value="no">
+    <label for="peerpressureNo">No</label>
+    </div>
+      </div class="button-container">
+      </div>
+
+      <div class="chronic">
+    <div class="header"><label for="chronicdisease">Do you have chronicdisease?</label></div class="header">
+      <div class="button-container">
+        <img src="https://www.hindustantimes.com/ht-img/img/2023/04/06/1600x900/chronic_diseases_1680770018226_1680770018377_1680770018377.jpg">
+    <input type="radio" id="chronicdiseaseYes" name="chronicdisease" value="yes">
+    <label for="chronicdiseaseYes">Yes</label>
+    <div class="gap">
+      <img src="https://png.pngtree.com/png-vector/20200403/ourmid/pngtree-healthy-people-vetor-corona-virus-protect-png-image_2173779.jpg">
+    <input type="radio" id="chronicdiseaseNo" name="chronicdisease" value="no">
+    <label for="chronicdiseaseNo">No</label>
+      </div class="button-container">
+    </div>
+      </div>
+
+      <div class="fatigue">
+    <div class="header" ><label for="fatigue">Do you have fatigue?</label></div class="header">
+      <div class="button-container">
+        <img src="https://befunctional.com.au/images/fatigue.jpg">
+    <input type="radio" id="fatigueYes" name="fatigue" value="yes">
+    <label for="fatigueYes">Yes</label>
+    <div class="gap">
+      <img src="https://simonvetter.com/wp-content/uploads/2017/05/energy-1030x537.jpg">
+    <input type="radio" id="fatigueNo" name="fatigue" value="no">
+    <label for="fatigueNo">No</label>
+    </div>
+      </div class="button-container">
+      </div>
+
+    
+
+   
+      <div class="allergy">
+    <div class="header"><label for="allergy">Do you have allergy?</label></div class="header">
+      <div class="button-container">
+        <img src="https://globalnews.ca/wp-content/uploads/2017/01/leg-rash-e1484596293204.jpg?quality=85&strip=all">
+    <input type="radio" id="allergyYes" name="allergy" value="yes">
+    <label for="allergyYes">Yes</label>
+    <div class="gap">
+      <img src="https://media.istockphoto.com/id/1319783516/photo/back-arm-muscle-man-with-grey-background-health-care-and-medical-concept.jpg?s=612x612&w=0&k=20&c=YC5haA6iosFCyBC0nAkPFfAc7hfzuDY6PnHVjLVKa7o=">
+    <input type="radio" id="allergyNo" name="allergy" value="no">
+    <label for="allergyNo">No</label>
+    </div>
+       </div class="button-container">
+      </div>
+
+      <div class="wheezing">
+    <div class="header"><label for="wheezing">Do you have wheezing?</label></div class="header">
+      <div class="button-container">
+        <img src="https://www.indigohealth.com/contentassets/cd5f09dd5bd945dc8e719ec0cb14c9b5/wheezing-4.jpeg">
+    <input type="radio" id="wheezingYes" name="wheezing" value="yes">
+    <label for="wheezingYes">Yes</label>
+    <div class="gap">
+      <img src="https://www.asthmafoundation.org.nz/assets/images/_listbanner/AdobeStock_368590915.jpeg">
+    <input type="radio" id="wheezingNo" name="wheezing" value="no">
+    <label for="wheezingNo">No</label> 
+    </div>
+      </div class="button-container">
+      </div>
+
+      <div class="alcohol">
+    <div class="header"><label for="alcohol">Do you consume alcohol?</label></div class="header">
+      <div class="button-container">
+        <img src="https://media-cldnry.s-nbcnews.com/image/upload/newscms/2016_48/1811466/161128-drinking-alcohol-jpo-108p.jpg">
+    <input type="radio" id="alcoholYes" name="alcohol" value="yes">
+    <label for="alcoholYes">Yes</label>
+    <div class="gap">
+      <img src="https://www.worldfinance.com/wp-content/uploads/2022/11/A081_rt.jpg">
+    <input type="radio" id="alcoholNo" name="alcohol" value="no">
+    <label for="alcoholNo">No</label>
+    </div>
+      </div class="button-container">
+      </div>
+
+      <div class="coughing">
+    <div class="header"><label for="coughing">Do you have coughing?</label></div class="header">
+      <div class="button-container">
+        <img src="https://media.istockphoto.com/id/1076823102/photo/illness-young-woman-coughing-in-the-street.jpg?s=612x612&w=0&k=20&c=rkGgLFXW7FCDjdXd5INIQC6Ogf5uYr_2-7o2IJyFn78=">
+    <input type="radio" id="coughingYes" name="coughing" value="yes">
+    <label for="coughingYes">Yes</label>
+    <div class="gap">
+      <img src="https://bodynbrainbucket.s3.amazonaws.com/uploads/newsimage/Blogs/2019/20191024-reduce-inflammation-with-this-breathing-exercise.jpg">
+    <input type="radio" id="coughingNo" name="coughing" value="no">
+    <label for="coughingNo">No</label>
+    </div>
+      </div class="button-container">
+      </div>
+
+      <div class="breath">
+    <div class="header"><label for="breath">Do you have <br>shortness of breath?</label></div class="header">
+      <div class="button-container">
+        <img src="https://www.hackensackmeridianhealth.org/-/media/project/hmh/hmh/public/healthu-images/education-stories/2020/04/2020-04-28_scaled.jpg?h=533&iar=0&w=800&hash=993754CB4F41B6FDB8B2ED0A96D9715B">
+    <input type="radio" id="breathYes" name="breath" value="yes">
+    <label for="breathYes">Yes</label>
+    <div class="gap">
+      <img src="https://www.allinahealth.org/-/media/allina-health/content/healthy-set-go/benefits-of-deep-breathing.jpg">
+    <input type="radio" id="breathNo" name="breath" value="no">
+    <label for="breathNo">No</label>
+    </div>
+      </div class="button-container">
+      </div>
+
+      <div class="swallow">
+    <div class="header"><label for="swallowingDifficulty">Do you have <br> swallowing difficulty?</label></div class="header">
+      <div class="button-container">
+        <img src="https://www.riversideonline.com/-/media/patients-and-visitors/healthy-you/hy-trouble-swallowing.ashx">
+    <input type="radio" id="swallowingDifficultyYes" name="swallowingDifficulty" value="yes">
+    <label for=" swallowingDifficultyYes">Yes</label>
+    <div class="gap">
+      <img src="https://svas.tech-strategic.com/wp-content/uploads/2016/01/drinking-water.png">
+    <input type="radio" id="swallowingDifficultyNo" name="swallowingDifficulty" value="no">
+    <label for="swallowingDifficultyNo">No</label>
+    </div>
+      </div class="button-container">
+      </div>
+
+      <div class="chest">
+    <div class="header"><label for="chestpain">Do you have  chestpain?</label></div class="header">
+      <div class="button-container">
+        <img src="https://www.healthifyme.com/blog/wp-content/uploads/2022/01/Chest-pain-1.jpg">
+    <input type="radio" id="chestpainYes" name="chestpain" value="yes">
+    <label for="chestpainYes">Yes</label>
+    <div class="gap">
+      <img src="https://drmatorin.com/wp-content/uploads/elementor/thumbs/blog-header-breathing-techniques-to-implement-when-youre-sitting-at-your-desk-all-day-phxgo812h6jhox9r3gwk82ksuv1u65ooet916z22cw.png">
+    <input type="radio" id="chestpainNo" name="chestpain" value="no">
+    <label for="chestpainNo">No</label>
+    </div>
+     </div class="button-container">
+      </div>
+      
+    
+
+    <input type="submit" value="Submit">
+    
+  </form>
+  
+  </body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;  
+        font-size: 30px;
+        color: white;  
+        background-image: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/tp244-bg1-09_1.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=97565fad163bbd32e360d509715834eb);
+        background-size: cover;
+
+    }
+    p{
+       font-size: 20px; 
+    }
+    h2{
+        padding: 0px 300px;
+        font-size: 40px;
+        margin-top: 00px;
+    }
+    h1 {
+        font-size: 40px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: gold;
+        margin-top: 40px;
+    }
+    h3{
+      color:navajowhite;
+      margin-left: -700px;
+      margin-top: 100px;
+    }
+    .doctors{
+        display: flex;
+    }
+    .doctor{
+        height: 300px;
+        width: 200px;
+        background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/3651fa81381729.5cfe55542529a.jpg);
+        color: black;
+        border: 5px solid black;
+        border-radius: 20px;
+        position:relative;
+        padding:5px;
+        flex-basis: 50%;
+        padding-left: 10px;
+        box-sizing: border-box;
+    }
+    
+    .doctor h1{
+        font-size: 20px;
+        color: red;
+    }
+    .doctor p{
+        font-size: 15px;
+        margin-bottom: 10px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        
+    }
+    .doctor a{
+        height: 30px;
+        text-align: center;
+        font-weight: bold;
+        
+        background-color: #007bff;
+        color: #fff;
+        padding: 0px 10px;    
+        border: 2px solid black;
+        border-radius: 4px;
+        font-size: 18px;
+        cursor: pointer;
+        text-decoration: none;
+        position:absolute;
+        top: 210px;
+        left: 80px;   
+    }
+</style>
+<body>
+  <h1>Lung Cancer Risk Diagnosis</h1>
+  <h3>Result:</h3>
+    <p>Based on your health condition,</p>
+    {% if prediction %}
+        <h2>You don't have cancer.You have healthy lungs.</h2>
+        <h3>Foods which are good to your lungs</h3>
+        <p>Apples,Beets,Pumpkin,Tomotoes,Leafy greens,Blueberries,Green tea,Red cabbage,Edamame,Olive oil,Brazil nuts.</p>
+        <h3>Food which you should avoid</h3>
+        <p>Salty Foods,Dairy Products,Processed Meats,Soda,Fried Foods,White Bread,Potato Chips,Chocolate,Beer,Cold Cuts.</p>
+    {% else %}
+        <h2>You have cancer.Consult your doctor immediately.<br>Here are the top doctors for lung cancer treatment.</h2>
+        <div class="doctors">
+        <div class="doctor">
+        <h1>Dr. Rajaraman Ramamurthy</h1>
+        <p>Surgical Oncologist
+            <br>Senior Consultant
+           <br> MCh, MS, MBBS,
+           <br> Chennai, India.
+           <br>39 years of experience
+           <br> Hospital:Apollo Cancer Hospital, Chennai<br>
+             <a href="https://www.vaidam.com/lp/consult-online?doctor=18350">Book appointment</a></p>
+        </div>
+        <div class="doctor">
+            <h1>Dr. N. Kathiresan</h1>
+            <p>Surgical Oncologist, Chennai, India<br>
+                Consultant, 24 years of experience<br>
+                Hospital:DR. Kamakshi memorial hospital,Chennai<br>
+                <a href="https://www.vaidam.com/lp/consult-online?doctor=18224">Book appointment</a></p>
+        </div>
+        <div class="doctor">
+            <h1>Dr Sripriya Rajan</h1>
+            <p>Surgical Oncologist, Chennai, India<br>
+                Consultant, 24 years of experience.
+                Hospital:Apollo hospital,Chennai <br>
+            <a href="https://www.vaidam.com/lp/consult-online?doctor=18329">Book appointment</a></p>
+        </div>
+        <div class="doctor">
+            <h1>Dr. Loganathan</h1>
+            <p>General Physician<br>
+                29 Years Experience<br>
+                MBBS, MS - Orthopaedics<br>
+                Hospital:Dr.loganathan Hospital , Erode<br>
+            <a href="https://www.lybrate.com/erode/doctor/dr-loganathan-general-physician">Book appointment</a></p>
+        </div>
+        </div>
+        <div class="doctors">
+        <div class="doctor">
+            <h1> Dr. Arunandhi Chelvan</h1>
+            <p>MCh - Surgical Oncology, MBBS<br>
+                Surgical Oncologist<br>
+                8 Years Experience Overall  (7 years as specialist)<br>
+                Hospital:Royal Care Super Speciality Hospital
+            <a href="https://www.practo.com/coimbatore/doctor/arunandhi-chelvan-oncologist?practice_id=881601&specialization=Lung%20Cancer&referrer=doctor_listing&category_name=symptom&category_id=220">Book appointment</a></p>
+        </div>
+        <div class="doctor">
+            <h1>Dr. K S Rajkumar</h1>
+            <p>MBBS, MS - General Surgery, MCh - Surgical Oncology<br>
+                Surgical Oncologist<br>
+                12 Years Experience Overall  (7 years as specialist)<br>
+                Hospital:GS Hospital<br>
+            <a href="https://www.practo.com/coimbatore/doctor/k-s-rajkumar-surgical-oncologist?practice_id=1036651&specialization=Lung%20Cancer&referrer=doctor_listing&category_name=symptom&category_id=220">Book appointment</a></p>
+        </div>
+        <div class="doctor">
+            <h1>Dr. T. K. Sarpparajan</h1>
+            <p>MBBS, MS - General Surgery, MCh - Surgical Oncology<br>
+                Surgical Oncologist<br>
+                30 Years Experience Overall  (20 years as specialist)<br>
+                Hospital:Apollo Hospital<br>
+                <a href="https://www.practo.com/madurai/doctor/t-k-sarpparajan-oncologist?practice_id=758131&specialization=Lung%20Cancer%20Treatment&referrer=doctor_listing&category_name=service&category_id=3056">Book appointment</a>
+            </p>
+        </div>
+        <div class="doctor">
+            <h1>Shankar N S</h1>
+            <p>General Physician<br>
+                3 Years Experience<br>
+                MBBS<br>
+                Hospital:SS Clinic<br>
+            <a href="https://www.lybrate.com/erode/doctor/dr-shankar-n-s-general-physician">Book appointment</a></p>
+        </div>
+        </div>
+    
+    {% endif %}
+</body>
+</html>

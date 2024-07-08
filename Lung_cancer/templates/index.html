@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lung Cancer Diagnosis</title>
+<style>
+    body {
+        margin: 0px;
+        position: absolute;
+        height: 100vh;
+        overflow: hidden; /* Prevents scrolling */
+    }
+    
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('https://png.pngtree.com/thumb_back/fh260/back_our/20190628/ourmid/pngtree-smoker-s-lungs-background-image_280969.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        transform: scaleX(-1); /* Horizontal Flip */
+        z-index: -1; /* Ensure it's behind other content */
+    }
+    h1{
+        height: 80px;
+        text-align:center;
+        padding-top:20px;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight:1000;
+        font-size: 50px;
+        color:gold;
+    }
+    p{
+        font-size: 30px;
+        margin: 30px;
+        margin-left: 500px;
+        margin-right: 00px;
+        text-align: center;
+        color:white;
+    }
+    button{
+      background-color:aliceblue;
+      color:white;
+      font-weight: bolder;
+      padding: 15px;
+      border:3px solid red;
+      border-radius: 10px;
+      font-size: 27px;
+      cursor: pointer;
+      margin-top: 100px;
+      margin-left: 800px;
+      font-weight: bolder;
+     }
+     button:hover {
+      background-color:gray;
+    }
+    a{
+        text-decoration: none;
+    }
+</style>    
+</head>
+<body>
+    <h1>Lung Cancer Diagnosis</h1>
+    <p>This website is designed to provide you with risk of developing lung cancer. By
+       answering a few questions, you can verify the symptoms associated with lung cancer.</p>
+    <button><a href="/home">START </a></button>
+    
+</body>
+</html>
